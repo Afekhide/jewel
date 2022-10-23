@@ -1,0 +1,69 @@
+@use './vars' as vars;
+$golden-ratio: 1.618;
+$card-width: 20vw;
+
+.locationCard{
+    position: relative;
+    width: fit-content;
+    overflow-x: scroll;
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.locationData{
+    position: relative;
+    transform: translateY(-50%);
+    left: 20%;
+    width: 110%;
+    padding: 1rem 1rem;
+    background: vars.$dark-white;
+
+    & > section{
+        display: flex;
+        gap: 0.5rem;
+        cursor: pointer;
+        justify-content: flex-start;
+
+        & > section{
+            display: flex;
+            align-items: center;
+
+            img{
+                width: 1rem;
+                height: auto;
+            }
+        }
+
+        h2{
+            font-family: "NewYork", sans-serif;
+            font-size: 1.2rem;
+            color: vars.$black-light;
+            font-weight: bold;
+        }
+    }
+
+    p{
+        margin-top: 0.8rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: vars.$black-light
+    }
+}
+
+.locationImageContainer{
+    
+    height: calc($card-width*$golden-ratio);
+    width: $card-width;
+    position: relative;
+    background-color: vars.$dark-white;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

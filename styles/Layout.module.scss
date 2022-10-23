@@ -1,0 +1,19 @@
+@use './mixins' as breakpoints;
+
+.container{
+    padding: 0 2rem;
+    @include breakpoints.small-up{
+        padding: 0rem 3rem;
+    }
+
+    @include breakpoints.medium-up{
+        padding: 0 8rem;
+    }
+
+    @include breakpoints.large-only{
+        padding: 0 10rem;
+    }
+    @include breakpoints.extra-large{
+        padding: 0 12rem;
+    }
+}

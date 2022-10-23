@@ -1,0 +1,226 @@
+@use './vars' as vars;
+@use  './mixins' as breakpoints;
+
+.slideOut{
+    ///animation-name: slideOut;
+    //animation-duration:500ms;
+    //animation-timing-function: ease-out;
+    transform: translate(100vw);
+    opacity: 0;
+}
+
+.scaleIn{
+    //animation-name: scaleIn;
+    //animation-delay: 500ms;
+    //animation-duration: 300ms;
+    //animation-timing-function: ease-out;
+    transform: scale(0);
+}
+
+.wrapper{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    transition: all 300ms ease-out;
+    transition-delay: 300ms;
+    background-color: #2e2e2e63;
+
+}
+
+.contents{
+    position: absolute;
+    width: 75%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    display: grid;
+    padding-left: 10rem;
+    padding-right: 4rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    background-color: #fff;
+    transition: all 300ms ease-out;
+
+}
+
+.controls{
+    padding: 1.5rem 0;
+    display: flex;
+    column-gap: 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+
+    p{
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: vars.$black-light;
+    }
+
+    .closeIcon{
+        width: 2rem;
+        cursor: pointer;
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+    position: relative;
+}
+
+.navLinks{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    li{
+        padding: 0.5rem 0rem;
+        display: flex;
+        cursor: pointer;
+        column-gap: 0.5rem;
+
+
+        span{
+            font-weight: 500;
+            font-size: 2rem;
+            color: #2e2e2ed9;
+            transition: all 300ms ease-in-out;
+
+
+            &:is(:hover, :focus, :active){
+                font-weight: 600;
+                color: vars.$primary;
+                font-style: italic;
+            }
+            
+        }
+
+        &:is(:hover, :focus, :active) svg{
+            fill: vars.$primary;
+            stroke: vars.$primary;
+            width: 2rem;
+            transform: scale(80%) translateY(50%);
+        }
+
+        svg{
+            stroke: vars.$black-light;
+            fill: vars.$black-light;
+            transition: all 300ms ease-in-out;
+            transform: scale(0%) translateY(350%);
+        }
+    }
+
+    &::after{
+        content: '' url('../public/icons/logo.svg');
+        position: absolute;
+        width: 8rem;
+        height: auto;
+        right: 30vw;
+        opacity: 0.2;
+        transform: scale(150%) translate(50%, 40%);
+    }
+}
+
+.socials{
+    margin-top: 1rem;
+    display: flex;
+    width: fit-content;
+    padding-top: 2rem;
+    position: relative;
+    
+    column-gap: 2.5rem;
+    
+    &::before{
+        content: '';
+        top: 0;
+        position: absolute;
+        width: 110%;
+        height: 2px;
+        background-color: #2e2e2e1a;
+    }
+
+    li{
+        color: vars.$black-light;
+        font-size: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.footer{
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+
+    span{
+        position: relative;
+        font-size: 0.8rem;
+        color: #00000090;
+        font-weight: 600;
+        transition: all 300ms ease-in;
+
+        &:is(:hover, :focus, :hover){
+            color: #000;
+        }
+
+        &:is(:active, :focus, :hover)::after{
+            width: 100%;
+        }
+
+        &::after{
+            position: absolute;
+            bottom: -5px;
+            content: '';
+            width: 0;
+            height: 2px;
+            left: 0;
+            border-radius:50%;
+            transition: all 300ms ease-in-out;
+            background-color: vars.$primary;
+        }
+    }
+
+    
+
+    & section:is(:nth-child(1)){
+        display: flex;
+        column-gap: 1.5rem;
+        cursor: pointer;
+    }
+
+    & section:is(:nth-child(2)){
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+@keyframes slideOut{
+    from{
+        transform: translate(0);
+    }
+
+    to{
+        transform: translate(100vw);
+    }
+}
+
+@keyframes scaleIn{
+    from{
+        transform: scale(100%);
+    }
+
+    to{
+        transform: scale(0%);
+    }
+}

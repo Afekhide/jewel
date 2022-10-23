@@ -1,0 +1,40 @@
+@use './vars' as vars;
+
+.button{
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 200ms ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 2;
+    letter-spacing: 1.5px;
+    background-color: vars.$logo-color;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        opacity: 0.3;
+        transform: scaleX(0%);
+        transition: all 150ms ease-in-out;
+        background-color: vars.$primary;
+    }
+
+    &:is(:hover, :focus, :active){
+        outline: none;
+        border: none;
+    }
+
+    &:is(:hover, :focus, :active)::after{
+        transform: scaleX(100%);
+    }
+}

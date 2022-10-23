@@ -1,0 +1,139 @@
+@use './vars' as vars;
+@use './mixins' as breakpoints;
+$hero-image-height: 60vh;
+$hero-image-width: 60vw;
+
+.container{
+    width: $hero-image-width;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.imageReel{
+    display: flex;
+    transition: all ease-out;
+    transition-duration: 300ms;
+    min-width: $hero-image-width;
+    width: max-content;
+    height: $hero-image-height;
+
+    img{
+        display: block;
+        width: $hero-image-width;
+        height: $hero-image-height;
+        max-width: 100%;
+        flex-grow: 1;
+        transition: all 300ms ease-out;
+        object-fit: cover;
+
+        &:is(:hover, :focus){
+            transform: (scale(120%));
+        }
+    }
+}
+
+
+.statsContainer{
+    position: absolute;
+    width: 90%;
+    right: 0;
+    bottom: 0%;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+}
+
+.stats{
+    column-gap: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+    background-color: vars.$dark-white;
+}
+
+.info{
+    width: 70%;
+    border-right: 0.5px solid #2e2e2e30;
+}
+
+.name{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: vars.$black;
+    font-family: 'NewYork', sans-serif;
+}
+
+.locationDetails{
+    display: flex;
+    column-gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+
+    span{
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: #2e2e2eb3;
+
+        svg{
+            transform: scale(80%);
+        }
+    }
+}
+
+.priceContainer{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 1rem;
+}
+
+.price{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: vars.$black;
+    font-weight: 500;
+    font-family: 'NewYork', sans-serif;
+
+    
+}
+
+.price+section>button{
+        font-weight: 300;
+}
+
+
+.controls{
+    display: flex;
+    column-gap: 0.2rem;
+    background-color: vars.$primary-light;
+
+    &>section{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+        justify-content: center;
+    }
+
+    &>section:is(:hover, :active, :focus) {
+        background-color: vars.$primary;
+
+        svg{
+            fill: #fff !important;
+            stroke: #fff !important;
+        }
+    }
+    &>section svg{
+        transform: scale(40%);
+        transition: all 300ms;
+        stroke: vars.$black-light;
+        fill: vars.$primary !important;
+
+    }
+    &>section:first-child{
+        transform: rotate(180deg);
+    }
+}

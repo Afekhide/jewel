@@ -1,0 +1,25 @@
+{
+  "name": "jewel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@netlify/plugin-nextjs": "^4.27.3",
+    "gsap": "^3.11.3",
+    "next": "^12.2.2",
+    "react": "^18.2.0",
+    "sass": "^1.55.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

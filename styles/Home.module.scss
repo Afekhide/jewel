@@ -1,0 +1,55 @@
+@use './mixins' as breakpoints;
+@use './vars' as vars;
+
+.container{
+    width: 50vw;
+    margin: 2rem auto;
+}
+
+.heroHeader{
+    margin-top: 4rem;
+}
+
+.heroHeading{
+    font-size: 2.4rem;
+    text-align: center;
+    color: vars.$black-light;
+    font-weight: 500;
+    font-family: 'NewYork', sans-serif;
+}
+
+.hero{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menusSection{
+    padding: 0 auto;
+    margin-top: 4rem;
+}
+
+.menusContainer{
+    display: flex;
+    column-gap: 0.2rem;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.resultsContainer{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.locationsSection{
+    padding: 0 auto;
+    margin: 2rem 0;
+}
+
+.locationsContainer{
+    display: flex;
+    justify-content: center;
+    column-gap: 0.8rem;
+    margin: 0 auto;
+}

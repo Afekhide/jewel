@@ -1,0 +1,91 @@
+@use './vars' as vars;
+
+.container{
+    width: fit-content;
+    min-width: 14rem;
+    position: relative;
+    background-color: vars.$dark-white;
+    &:is(:hover, :focus, :active){
+        background-color: #efefef;
+    }
+
+    .valuesContainer{
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 110%;
+        width: 100%;
+        z-index: 5;
+        visibility: hidden;
+        transition: all 300ms ease-in-out;
+    }
+
+    &:has(.valuesContainer.open){
+        .heading::after{
+            transform: scale(80%) rotate(180deg);
+        }
+    }
+}
+
+.valuesContainer.open{
+    visibility: visible;
+    opacity: 1;
+    top:100%;
+}
+
+
+.category{
+    font-size: 0.8rem;
+    font-weight: 300;
+    opacity: 0.8;
+    padding:1rem 1rem;
+    padding-bottom: 0;
+    color: vars.$black-light;
+}
+
+.heading{
+    font-weight: 500;
+    padding:1rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    cursor: pointer;
+    color: vars.$black-light;
+
+    &::after{
+        content: "" url('../public/icons/chevron.svg');
+        width: 1rem;
+        height: auto;
+        display: flex;
+        position: absolute;
+        top: 25%;
+        opacity: 0.6;
+        right: 2rem;
+        transform: scale(80%);
+        cursor: pointer;
+        transition: all 300ms ease-out;
+        align-items: center;
+    }
+
+}
+
+
+
+.values{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    background-color: vars.$dark-white;
+
+    .value{
+        padding:0.5rem 1rem;
+        color: vars.$black-light;
+        cursor: pointer;
+        font-weight: 300;
+        font-size: 1.2rem;
+        transition: all 300ms ease-out;
+        &:is(:hover, :active, :focus){
+            background-color: vars.$primary;
+            color: vars.$dark-white;
+        }
+    }
+}
