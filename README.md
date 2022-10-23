@@ -12,4 +12,4 @@ Here's what my implementation looks like.
 ![Home Screen](screenshot.png)
 ![SideBar](screenshot1.png)
 
-You can find a link to the live version [Here]() 
+You can find a link to the live version [Here](https://georgeandjewels.netlify.app/) 
