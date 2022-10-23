@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="387" height="164" viewBox="0 0 387 164">
+    <style>
+        text {
+            font-family:'NewYork', sans-serif;
+        }
+    </style>
   <g id="logo" transform="translate(-1124 -138.306)">
     <text id="George" transform="translate(1124 202.306)" fill="#e6c08e" font-size="67" font-family="NewYork"><tspan x="0" y="0">GEORGE</tspan></text>
     <text id="Jewels" transform="translate(1288 263.306)" fill="#e6c08e" font-size="67" font-family="NewYork"><tspan x="0" y="0">JEWELS</tspan></text>
