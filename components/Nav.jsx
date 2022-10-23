@@ -1,6 +1,7 @@
 import styles from '../styles/Nav.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+import Logo from './Logo';
 import { ContextDestructured } from '../context/AppContext';
 
 const Nav = () => {
@@ -16,7 +17,7 @@ const Nav = () => {
 
       <section>
         <Link href='/'>
-          <img className={styles.logo} src='/icons/logo.svg'/>
+          <img className={styles.logo} src='./images/logo.png'/>
         </Link>
       </section>
 

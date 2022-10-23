@@ -121,13 +121,13 @@
     }
 
     &::after{
-        content: '' url('../public/icons/logo.svg');
+        content: '' url('../public/images/logo.png');
         position: absolute;
         width: 8rem;
         height: auto;
         right: 30vw;
         opacity: 0.2;
-        transform: scale(150%) translate(50%, 40%);
+        transform: scale(60%) translate(70%,-20%);
     }
 }
 

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Logo from "../components/Logo";
 import { Fragment } from "react";
 
 const about = () => {
@@ -10,6 +11,9 @@ const about = () => {
 
         <section>
             About Page
+            <section>
+              <Logo/>
+            </section>
         </section>
     </Fragment>
   )
