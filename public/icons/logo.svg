@@ -5,9 +5,9 @@
         }
     </style>
   <g id="logo" transform="translate(-1124 -138.306)">
-    <text id="George" transform="translate(1124 202.306)" fill="#e6c08e" font-size="67" font-family="NewYork"><tspan x="0" y="0">GEORGE</tspan></text>
-    <text id="Jewels" transform="translate(1288 263.306)" fill="#e6c08e" font-size="67" font-family="NewYork"><tspan x="0" y="0">JEWELS</tspan></text>
-    <text id="Real_ESTATES" data-name="Real ESTATES" transform="translate(1293 297.306)" fill="#e6c08e" font-size="21" font-family="Raleway-SemiBold, Raleway" font-weight="600" letter-spacing="0.254em"><tspan x="0" y="0">REAL ESTATES</tspan></text>
-    <text id="_" data-name="&amp;" transform="translate(1229 280.306)" fill="#e6c08e" font-size="61" font-family="NewYork"><tspan x="0" y="0">&amp;</tspan></text>
+    <text id="George" transform="translate(1124 202.306)" fill="#e6c08e" font-size="67" font-family=NewYork><tspan x="0" y="0">GEORGE</tspan></text>
+    <text id="Jewels" transform="translate(1288 263.306)" fill="#e6c08e" font-size="67" font-family=NewYork><tspan x="0" y="0">JEWELS</tspan></text>
+    <text id="Real_ESTATES" data-name="Real ESTATES" transform="translate(1293 297.306)" fill="#e6c08e" font-size="21" font-family=Raleway font-weight="600" letter-spacing="0.254em"><tspan x="0" y="0">REAL ESTATES</tspan></text>
+    <text id="_" data-name="&amp;" transform="translate(1229 280.306)" fill="#e6c08e" font-size="61" font-family=NewYork><tspan x="0" y="0">&amp;</tspan></text>
   </g>
 </svg>
