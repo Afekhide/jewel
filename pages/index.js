@@ -6,7 +6,7 @@ import menus from '../data/menus';
 import Location from '../components/Location';
 import Button from '../components/Button';
 import DropDownMenu from '../components/DropDownMenu';
-import styles from '../styles/home.module.scss';
+import styles from '../styles/Home.module.scss';
 import HeroLocation from '../components/HeroLocation';
 
 
